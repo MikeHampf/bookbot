@@ -11,3 +11,7 @@ def letter_count(text):
         else:
             letters[text[i].lower()] = 1
     return letters
+
+def sort_dictionary(letters):
+    sorted_letters = sorted(letters.items() ,key=lambda x : x[1], reverse=True)
+    return sorted_letters
