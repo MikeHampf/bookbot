@@ -8,10 +8,13 @@ def get_book_text(filepath):
 
 def main():
     if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
         exit(code=1)
+
     text = get_book_text(sys.argv[1])
     letters = letter_count(text)
     sorted_letters = sort_dictionary(letters)
+
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
